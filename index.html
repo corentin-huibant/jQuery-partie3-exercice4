@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-2.2.4.js"></script>
+    <title>jQuery : exercice 4 - partie 3</title>
+  </head>
+  <body>
+      <button type="button" name="button" id="giant">giant</button>
+      <button type="button" name="button" id="green">green</button>
+      <button type="button" name="button" id="init">init</button>
+      <button type="button" name="button" id="disappear">disappear</button>
+      <button type="button" name="button" id="reappear">reappear</button>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div id="block" style="width:150px; height:10px; background:red;"></div>
+    <script>
+      $('#giant').click(function() { // déclaration d'une fonction qui, sur le clique du button #giant...
+         if ($('#block').height() < 100) { //si la hauteur de la div #block est plus petite que 100
+           $('#block').css('height', '+=10px'); // le block augmente de 10px à chaque clique
+         }else { //sinon
+           $('#block').css('height', '10px'); // il retourne à 10px
+         }
+      });
+      $('#green').click(function() {  // déclaration d'une fonction qui, sur le clique du button #green
+        $('#block').css('background', 'green'); //modifie le css (couleur verte) de la div #block
+      });
+      $('#init').click(function() { // déclaration d'une fonction qui, sur le clique du button #init
+        $('#block').css('background', 'red'); //modifie le css (couleur rouge initiale) de la div #block
+      });
+      $('#disappear').click(function() { //déclaration d'une fonction qui, sur le clique du button #disappear
+        $('#block').hide(); //la méthode hide cache la div #block
+      });
+      $('#reappear').click(function() { //déclaration d'une fonction qui, sur le clique du button #reaappear
+        $('#block').show(); //la méthode hide fait aparaitre la div #block
+      });
+    </script>
+  </body>
+</html>
